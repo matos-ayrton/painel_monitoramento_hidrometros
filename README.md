@@ -18,10 +18,7 @@ Sistema de monitoramento e gestão de dados de hidrômetros.
 
 ## 📈 Gráfico de Atividade Semanal
 
-![GitHub Contribution Graph](https://ghchart.rshah.org/matos-ayrton)
-
-### Contribuições Detalhadas
-[![GitHub Streak](https://streak-stats.demolab.com?user=matos-ayrton&theme=default&locale=pt_BR&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
+![Estatísticas do Repositório](https://github-readme-stats.vercel.app/api/pin/?username=matos-ayrton&repo=painel_monitoramento_hidrometros&show_owner=true)
 
 ---
 
