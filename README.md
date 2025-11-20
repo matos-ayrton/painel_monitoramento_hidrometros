@@ -36,38 +36,6 @@ Sistema de monitoramento e gestão de dados de hidrômetros.
 | **Issues Abertas** | ![GitHub issues](https://img.shields.io/github/issues/matos-ayrton/painel_monitoramento_hidrometros?style=flat-square) |
 | **Pull Requests** | ![GitHub pull requests](https://img.shields.io/github/issues-pr/matos-ayrton/painel_monitoramento_hidrometros?style=flat-square) |
 
----
-
-## 📅 Progresso por Fase
-
-### Fase 1: Configuração Inicial ✅
-- [x] Estrutura do projeto
-- [x] Configuração do ambiente
-- [x] README inicial
-
-### Fase 2: Desenvolvimento Backend 🔄
-- [ ] API de coleta de dados
-- [ ] Integração com banco de dados
-- [ ] Testes unitários
-
-### Fase 3: Interface do Usuário ⏳
-- [ ] Dashboard principal
-- [ ] Gráficos de consumo
-- [ ] Relatórios
-
-### Fase 4: Deploy e Testes 📋
-- [ ] Testes de integração
-- [ ] Deploy em produção
-- [ ] Documentação final
-
----
-
-## 📊 Estatísticas de Linguagens
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=matos-ayrton&repo=painel_monitoramento_hidrometros&layout=compact&theme=default&locale=pt-br)
-
----
-
 ## 🚀 Sobre o Projeto
 
 Sistema desenvolvido para monitoramento inteligente de hidrômetros, permitindo:
@@ -103,20 +71,5 @@ pip install -r requirements.txt
 python main.py
 ```
 
----
-
-## 📞 Contato
-
-Desenvolvido por **[Seu Nome]**
-
-[![GitHub](https://img.shields.io/badge/GitHub-matos-ayrton-181717?style=flat-square&logo=github)](https://github.com/SEU_USUARIO)
-
----
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
-
----
 
 **Última atualização:** ![GitHub last commit](https://img.shields.io/github/last-commit/matos-ayrton/painel_monitoramento_hidrometros?style=flat-square)
