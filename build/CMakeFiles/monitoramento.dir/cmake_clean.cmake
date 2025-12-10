@@ -1,0 +1,29 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/monitoramento.dir/src/AlertService.cpp.o"
+  "CMakeFiles/monitoramento.dir/src/AlertService.cpp.o.d"
+  "CMakeFiles/monitoramento.dir/src/CLI.cpp.o"
+  "CMakeFiles/monitoramento.dir/src/CLI.cpp.o.d"
+  "CMakeFiles/monitoramento.dir/src/Fachada.cpp.o"
+  "CMakeFiles/monitoramento.dir/src/Fachada.cpp.o.d"
+  "CMakeFiles/monitoramento.dir/src/Logger.cpp.o"
+  "CMakeFiles/monitoramento.dir/src/Logger.cpp.o.d"
+  "CMakeFiles/monitoramento.dir/src/MonitoramentoBanco.cpp.o"
+  "CMakeFiles/monitoramento.dir/src/MonitoramentoBanco.cpp.o.d"
+  "CMakeFiles/monitoramento.dir/src/MonitoramentoService.cpp.o"
+  "CMakeFiles/monitoramento.dir/src/MonitoramentoService.cpp.o.d"
+  "CMakeFiles/monitoramento.dir/src/NotificacaoService.cpp.o"
+  "CMakeFiles/monitoramento.dir/src/NotificacaoService.cpp.o.d"
+  "CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.o"
+  "CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.o.d"
+  "CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.o"
+  "CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.o.d"
+  "CMakeFiles/monitoramento.dir/src/main.cpp.o"
+  "CMakeFiles/monitoramento.dir/src/main.cpp.o.d"
+  "monitoramento"
+  "monitoramento.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/monitoramento.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -1,0 +1,93 @@
+#include "CLI.hpp"
+#include <iostream>
+#include <iomanip>
+
+CLI::CLI(std::unique_ptr<Fachada> fachada) : fachada(std::move(fachada)) {}
+
+void CLI::executar() {
+    std::cout << "╔════════════════════════════════════════════════════╗" << std::endl;
+    std::cout << "║   SISTEMA DE MONITORAMENTO DE HIDRÔMETROS         ║" << std::endl;
+    std::cout << "╚════════════════════════════════════════════════════╝" << std::endl << std::endl;
+
+    fachada->iniciarMonitoramentoBackground();
+    std::cout << std::endl;
+
+    std::string opcao;
+    while (true) {
+        exibirMenu();
+        std::cout << "Escolha uma opção: ";
+        std::getline(std::cin, opcao);
+
+        if (opcao == "1") {
+            consultarConsumo();
+        } else if (opcao == "2") {
+            consultarUltimaLeitura();
+        } else if (opcao == "3") {
+            listarHidrometros();
+        } else if (opcao == "4") {
+            exibirStatus();
+        } else if (opcao == "5") {
+            std::cout << "\nEncerrando sistema..." << std::endl;
+            fachada->pararMonitoramento();
+            break;
+        } else {
+            std::cout << "\nOpção inválida. Tente novamente.\n" << std::endl;
+        }
+    }
+}
+
+void CLI::exibirMenu() {
+    std::cout << "┌────────────────────────────────────────────────────┐" << std::endl;
+    std::cout << "│ 1. Consultar consumo total por ID                 │" << std::endl;
+    std::cout << "│ 2. Consultar última leitura absoluta              │" << std::endl;
+    std::cout << "│ 3. Listar hidrometros disponíveis                 │" << std::endl;
+    std::cout << "│ 4. Exibir status do monitoramento                 │" << std::endl;
+    std::cout << "│ 5. Sair                                           │" << std::endl;
+    std::cout << "└────────────────────────────────────────────────────┘" << std::endl;
+}
+
+void CLI::consultarConsumo() {
+    int id;
+    std::cout << "\nDigite o ID do hidrometro: ";
+    std::cin >> id;
+    std::cin.ignore(); // Limpar o buffer de entrada
+
+    int consumo = fachada->obterConsumo(id);
+    std::cout << "\n✓ Consumo total do hidrometro " << id << ": " << std::setw(10) << consumo << " metros cúbicos\n" << std::endl;
+}
+
+void CLI::consultarUltimaLeitura() {
+    int id;
+    std::cout << "\nDigite o ID do hidrometro: ";
+    std::cin >> id;
+    std::cin.ignore(); // Limpar o buffer de entrada
+
+    int leitura = fachada->obterUltimaLeitura(id);
+    std::cout << "\n✓ Última leitura absoluta do hidrometro " << id << ": " << std::setw(10) << leitura << " unidades\n" << std::endl;
+}
+
+void CLI::listarHidrometros() {
+    auto hidrometros = fachada->listarHidrometros();
+    std::cout << "\n╔════════════════════════════════════════╗" << std::endl;
+    std::cout << "║  Hidrometros Disponíveis               ║" << std::endl;
+    std::cout << "╠════════════════════════════════════════╣" << std::endl;
+
+    for (int id : hidrometros) {
+        int consumo = fachada->obterConsumo(id);
+        int leitura = fachada->obterUltimaLeitura(id);
+        std::cout << "║ ID: " << std::setw(2) << id 
+                  << " | Consumo: " << std::setw(8) << consumo
+                  << " | Leitura: " << std::setw(8) << leitura << " ║" << std::endl;
+    }
+    std::cout << "╚════════════════════════════════════════╝\n" << std::endl;
+}
+
+void CLI::exibirStatus() {
+    std::cout << "\n┌──────────────────────────────────────┐" << std::endl;
+    if (fachada->estaAtivo()) {
+        std::cout << "│ Status: ✓ MONITORAMENTO ATIVO        │" << std::endl;
+    } else {
+        std::cout << "│ Status: ✗ MONITORAMENTO INATIVO      │" << std::endl;
+    }
+    std::cout << "└──────────────────────────────────────┘\n" << std::endl;
+}

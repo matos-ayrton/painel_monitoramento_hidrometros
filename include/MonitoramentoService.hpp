@@ -16,22 +16,29 @@ namespace fs = std::filesystem;
 class MonitoramentoService
 {
 public:
-    MonitoramentoService(const std::vector<std::pair<int,std::string>>& pastas,
+    struct ShaFolder {
+        int idSHA;
+        std::string pasta;
+        int roiX;
+        int roiY;
+        int roiWidth;
+        int roiHeight;
+    };
+
+    MonitoramentoService(const std::vector<ShaFolder>& pastas,
                MonitoramentoBanco& bancoRef);
 
-    std::string extrairVolume(const std::string& caminhoImg);
+    std::string extrairVolume(const std::string& caminhoImg, int roiX, int roiY, int roiWidth, int roiHeight);
 
     void iniciar();
 
 private:
-    struct ShaFolder {
-        int idSHA;
-        std::string pasta;
-    };
-
     std::vector<ShaFolder> pastasSHA;
+    // Mapa para registrar arquivos já lidos, usando o tempo de última modificação
     std::unordered_map<std::string, fs::file_time_type> arquivosLidos;
-    MonitoramentoBanco banco;
+    
+    // CORREÇÃO CRUCIAL: Uso de REFERÊNCIA para garantir que o serviço altere o banco original.
+    MonitoramentoBanco& banco; 
 
     tesseract::TessBaseAPI tess;
 };
