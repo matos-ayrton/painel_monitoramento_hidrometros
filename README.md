@@ -55,17 +55,12 @@ Sistema desenvolvido para monitoramento inteligente de hidrômetros, permitindo:
 
 ## 🏗️ Padrões de Projeto Utilizados
 
-Este projeto utiliza vários padrões de design de forma integrada para garantir flexibilidade, manutenibilidade e separação de responsabilidades:
+Este projeto utiliza vários padrões de design de forma integrada para garantir flexibilidade, manutenibilidade e separação de responsabilidades, conforme as especificações do projeto:
 
-### 1. **Singleton (Fachada)**
+### 1. **Singleton (Fachada - Nível Geral)**
 **Localização:** `include/Fachada.hpp`, `src/Fachada.cpp`
-
 **O que é:** Garante que apenas uma instância da classe existe em toda a aplicação.
-
-**Por que foi usado:**
-- A `Fachada` é o ponto central de orquestração do sistema (inicializa adaptador OCR, mediator, serviço de monitoramento).
-- Múltiplas threads e componentes precisam acessar a mesma instância para coordenar leituras.
-- Evita duplicação de recursos custosos (adaptador Tesseract, banco de dados).
+**Por que foi usado:** A `Fachada` é o ponto central de orquestração do sistema.
 
 **Exemplo de uso:**
 ```cpp
@@ -73,38 +68,39 @@ Fachada& fachada = Fachada::getInstance();
 fachada.iniciarMonitoramentoBackground();
 ```
 
----
+### 3. **Builder Pattern (Subsistema de Usuários)**
+**Localização:** `include/usuario/UsuarioBuilder.hpp`, `src/usuario/UsuarioBuilder.cpp`
+**O que é:** Separa a construção de um objeto complexo de sua representação.
+**Por que foi usado:** O Builder é usado para o cadastro de novos usuários (RF05) e vinculação de Contas (RF09) de forma controlada.
 
-### 2. **Strategy Pattern (Leitura de Valores)**
+
+### 4. **Singleton (Subsistema de Logs)**
+**Localização:** `include/log/Logger.hpp`, `src/log/Logger.cpp`
+**O que é:** Garante que a classe responsável por registrar logs tenha apenas uma instância.
+**Por que foi usado:** O `Logger` é o único ponto de acesso para registro de eventos (RF14, RF15) e logs de erro (RF16), garantindo integridade.
+
+### 5. **Strategy Pattern (Monitoramento e Alertas)**
 **Localização:** `include/ILeituraStrategy.hpp`, `src/LeituraEstaticaStrategy.cpp`
-
 **O que é:** Define uma família de algoritmos, encapsula cada um e os torna intercambiáveis.
-
 **Por que foi usado:**
-- Diferentes estratégias de leitura podem ser implementadas (estática, dinâmica, adaptativa).
-- Atualmente usa `LeituraEstaticaStrategy`, mas permite adicionar novas estratégias sem alterar código existente.
-- O ROI (Region of Interest) e parâmetros da estratégia são configuráveis por hidrômetro.
+* **Monitoramento:** Implementa o monitoramento individualizado (RF11) e em grupo (RF12) através da troca de estratégias de consulta e cálculo de consumo.
+* **Alertas:** Permite configurar limites de consumo a nível individual ou por grupo de hidrômetros (RF18).
 
 **Exemplo:**
 ```cpp
 auto strategy = OcrStrategyFactory::createStrategy(
-    StrategyType::ESTATICA, 
-    270, 312, 550, 410,  // ROI específico para SHA 1
-    ocrAdapter
+    StrategyType::ESTATICA, 
+    270, 312, 550, 410,  // ROI específico para SHA 1
+    ocrAdapter
 );
 ```
+Padrão 6 (Factory Pattern - Strategies)
 
----
 
-### 3. **Factory Pattern (Criação de Strategies)**
+### 6. **Factory Pattern (Criação de Strategies - Subsistema de Monitoramento)**
 **Localização:** `include/OcrStrategyFactory.hpp`, `src/OcrStrategyFactory.cpp`
-
-**O que é:** Encapsula a criação de objetos, centralizando a lógica de instanciação.
-
-**Por que foi usado:**
-- Desacopla o código que cria strategies do código que as usa.
-- Facilita adicionar novos tipos de estratégias sem modificar o cliente.
-- Centraliza a passagem do adaptador OCR para as strategies.
+**O que é:** Encapsula a criação de objetos.
+**Por que foi usado:** Desacopla o código que cria estratégias de leitura e relatórios (RF13) do código que os utiliza.
 
 **Exemplo:**
 ```cpp
@@ -112,22 +108,14 @@ std::unique_ptr<ILeituraStrategy> strategy =
     OcrStrategyFactory::createStrategy(StrategyType::ESTATICA, x, y, w, h, adapter);
 ```
 
----
+### Padrão 7 (Adapter Pattern)
 
-### 4. **Adapter Pattern (OCR Abstraction)**
+### 7. **Adapter Pattern (Monitoramento e Alertas)**
 **Localização:** `include/IOcrAdapter.hpp`, `include/TesseractOcrAdapter.hpp`, `src/TesseractOcrAdapter.cpp`
-
 **O que é:** Adapta uma interface existente para outra interface esperada pelo cliente.
-
 **Por que foi usado:**
-- **Desacoplamento da dependência Tesseract:** A estratégia não conhece diretamente Tesseract; interage via `IOcrAdapter`.
-- **Flexibilidade futura:** Permite substituir Tesseract por outro OCR (Google Vision, EasyOCR) sem alterar `LeituraEstaticaStrategy`.
-- **Controle centralizado:** Whitelist, configurações de OCR e tratamento de erros ficam localizados no adapter.
-
-**Responsabilidades do Adapter:**
-- Inicializar/finalizar Tesseract
-- Definir whitelist de caracteres permitidos
-- Extrair texto de ROI específico em imagem
+* **Monitoramento:** Garante que a fonte de dados do processamento de imagens (SHA) seja convertida para o formato `Consumo Detalhado` esperado (RF10).
+* **Alertas:** Permite o envio de notificações por serviços externos (e-mail, SMS, API - RF21 a RF23) através de uma interface unificada.
 
 **Exemplo:**
 ```cpp
@@ -137,23 +125,12 @@ ocrAdapter->definirWhitelist("0123456789");
 std::string digitos = ocrAdapter->extrairTexto(imagem, x, y, w, h);
 ```
 
----
+### Padrão 8 (Mediator Pattern)
 
-### 5. **Mediator Pattern (Coordenação de Leituras)**
+### 8. **Mediator Pattern (Coordenação de Leituras - Subsistema de Monitoramento)**
 **Localização:** `include/IMonitoramentoMediator.hpp`, `include/MonitoramentoConcretoMediator.hpp`, `src/MonitoramentoConcretoMediator.cpp`
-
 **O que é:** Define um objeto que encapsula como um conjunto de objetos interagem.
-
-**Por que foi usado:**
-- **Desacoplamento entre componentes:** `MonitoramentoService` e `MonitoramentoBanco` não se comunicam diretamente.
-- **Lógica centralizada:** O mediator controla quando uma leitura é registrada, calcula deltas e notifica o banco.
-- **Facilita manutenção:** Mudanças na lógica de coordenação ficam em um único lugar.
-
-**Responsabilidades do Mediator:**
-- Receber notificação de nova leitura do `MonitoramentoService`
-- Calcular delta (diferença) em relação à leitura anterior
-- Registrar no banco de dados
-- Notificar serviços de alerta (se necessário)
+**Por que foi usado:** O mediator controla o fluxo da leitura (coleta -> cálculo delta -> notificação do banco), desacoplando o `MonitoramentoService` do `MonitoramentoBanco`.
 
 **Exemplo:**
 ```cpp
@@ -161,60 +138,10 @@ mediator.notificarLeitura(idSHA, valorAtual, ultimaLeitura);
 // Internamente: calcula delta, registra no banco, dispara alertas
 ```
 
----
-
-### 6. **Observer Pattern (Implícito via Mediator)**
-**Localização:** Implementado através do mediator e possíveis serviços de alerta.
-
-**O que é:** Define uma relação um-para-muitos onde mudanças em um objeto notificam automaticamente seus dependentes.
-
-**Por que foi usado:**
-- Permite que múltiplos serviços (alertas, logs, notificações) reajam a novas leituras.
-- O `MonitoramentoService` não precisa conhecer todos os "observadores".
-
----
-
-## 📊 Fluxo Arquitetural
-
-```
-main()
-  ↓
-CLI (interface do usuário)
-  ↓
-Fachada (orquestrador central - Singleton)
-  ├─→ MonitoramentoService (inicia em thread)
-  │    ├─→ Itera pastas SHA
-  │    ├─→ Chama Strategy (LeituraEstaticaStrategy)
-  │    │    └─→ Usa IOcrAdapter (TesseractOcrAdapter)
-  │    └─→ Notifica Mediator
-  │
-  ├─→ MonitoramentoConcretoMediator
-  │    └─→ Registra no MonitoramentoBanco
-  │
-  └─→ OcrStrategyFactory (cria strategies)
-```
-
----
-
-## 🔄 Por Que Esses Padrões Juntos?
-
-1. **Manutenibilidade:** Cada componente tem uma responsabilidade clara.
-2. **Testabilidade:** Interfaces bem definidas facilitam testes unitários com mocks.
-3. **Extensibilidade:** Novos hidrômetros, estratégias e OCRs podem ser adicionados sem recompilação de código existente.
-4. **Reutilização:** A `Fachada` encapsula complexidade; o CLI fica simples.
-5. **Escalabilidade:** Possibilita adicionar mais pastas, mediators e serviços de alerta futuramente.
-
----
-
-## 📝 Como Usar
-
-```bash
-# Clone o repositório
-git clone https://github.com/SEU_USUARIO/painel_monitoramento_hidrometros.git
-
-# Entre na pasta
-cd painel_monitoramento_hidrometros
-```
+### Padrão 9 (Observer Pattern)
 
 
-**Última atualização:** ![GitHub last commit](https://img.shields.io/github/last-commit/matos-ayrton/painel_monitoramento_hidrometros?style=flat-square)
+### 9. **Observer Pattern (Subsistema de Alertas)**
+**Localização:** `include/alerta/`, `include/notificacao/`
+**O que é:** Define uma relação de dependência um-para-muitos.
+**Por que foi usado:** Permite que múltiplos serviços (Alertas, Logs) reajam ao evento de **consumo excessivo** (RF19), sem acoplar o serviço de monitoramento.
