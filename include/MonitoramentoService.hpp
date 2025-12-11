@@ -5,11 +5,10 @@
 #include <unordered_map>
 #include <vector>
 #include <filesystem>
-
-#include <opencv2/opencv.hpp>
-#include <tesseract/baseapi.h>
-
+#include <memory> 
 #include "MonitoramentoBanco.hpp"
+#include "ILeituraStrategy.hpp" 
+#include "IMonitoramentoMediator.hpp" 
 
 namespace fs = std::filesystem;
 
@@ -19,28 +18,25 @@ public:
     struct ShaFolder {
         int idSHA;
         std::string pasta;
-        int roiX;
-        int roiY;
-        int roiWidth;
-        int roiHeight;
+        std::unique_ptr<ILeituraStrategy> strategy; // Strategy Pattern
     };
 
-    MonitoramentoService(const std::vector<ShaFolder>& pastas,
-               MonitoramentoBanco& bancoRef);
-
-    std::string extrairVolume(const std::string& caminhoImg, int roiX, int roiY, int roiWidth, int roiHeight);
+    MonitoramentoService(std::vector<ShaFolder> pastas,
+               IMonitoramentoMediator& mediatorRef,
+               MonitoramentoBanco& bancoRef); 
 
     void iniciar();
 
+    // Habilita/desabilita saída verbose para debug (imprime varredura e leituras)
+    void setVerbose(bool ativo);
+
 private:
     std::vector<ShaFolder> pastasSHA;
-    // Mapa para registrar arquivos já lidos, usando o tempo de última modificação
     std::unordered_map<std::string, fs::file_time_type> arquivosLidos;
     
-    // CORREÇÃO CRUCIAL: Uso de REFERÊNCIA para garantir que o serviço altere o banco original.
+    IMonitoramentoMediator& mediator; 
     MonitoramentoBanco& banco; 
-
-    tesseract::TessBaseAPI tess;
+    bool verbose{false};
 };
 
 #endif

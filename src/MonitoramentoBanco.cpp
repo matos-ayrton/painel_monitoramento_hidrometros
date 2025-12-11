@@ -1,33 +1,46 @@
 #include "MonitoramentoBanco.hpp"
-#include <iostream>
-
-// Adiciona o Delta (Volume Gasto) à soma total.
-void MonitoramentoBanco::adicionarVolumeGasto(int idSHA, int deltaVolume) {
-    dados[idSHA].somaTotal += deltaVolume;
-}
-
-// Implementação para buscar a última leitura absoluta registrada.
-int MonitoramentoBanco::getUltimaLeituraAbsoluta(int idSHA) const {
-    if (!dados.count(idSHA) || dados.at(idSHA).leituras.empty()) {
-        return 0; // 0 se não houver leituras anteriores
-    }
-    // Retorna o último valor absoluto registrado.
-    return dados.at(idSHA).leituras.back();
-}
-
+#include <stdexcept>
 
 void MonitoramentoBanco::registrarLeitura(int idSHA, int valor) {
-    // CORRIGIDO: Insere o valor absoluto na lista, mas NÃO soma ao somaTotal.
     dados[idSHA].leituras.push_back(valor);
 }
 
+void MonitoramentoBanco::adicionarVolumeGasto(int idSHA, int deltaVolume) {
+    if (deltaVolume > 0) {
+        dados[idSHA].somaTotal += deltaVolume;
+    }
+}
+
+int MonitoramentoBanco::getUltimaLeituraAbsoluta(int idSHA) const {
+    auto it = dados.find(idSHA);
+    if (it != dados.end() && !it->second.leituras.empty()) {
+        return it->second.leituras.back();
+    }
+    return 0; 
+}
+
 long long MonitoramentoBanco::getTotal(int idSHA) const {
-    if (!dados.count(idSHA)) return 0;
-    return dados.at(idSHA).somaTotal;
+    auto it = dados.find(idSHA);
+    if (it != dados.end()) {
+        return it->second.somaTotal;
+    }
+    return 0;
 }
 
 const std::vector<int>& MonitoramentoBanco::getLeituras(int idSHA) const {
-    // Note: Esta função deve ser chamada apenas se dados[idSHA] existir,
-    // pois usa .at() que lança exceção se a chave não existir.
-    return dados.at(idSHA).leituras;
+    static const std::vector<int> empty;
+    auto it = dados.find(idSHA);
+    if (it != dados.end()) {
+        return it->second.leituras;
+    }
+    return empty;
+}
+
+std::vector<int> MonitoramentoBanco::listarHidrometros() const {
+    std::vector<int> ids;
+    for (const auto& pair : dados) {
+        ids.push_back(pair.first);
+    }
+    std::sort(ids.begin(), ids.end());
+    return ids;
 }

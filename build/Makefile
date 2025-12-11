@@ -201,6 +201,30 @@ src/Fachada.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/Fachada.cpp.s
 .PHONY : src/Fachada.cpp.s
 
+src/LeituraEstaticaStrategy.o: src/LeituraEstaticaStrategy.cpp.o
+.PHONY : src/LeituraEstaticaStrategy.o
+
+# target to build an object file
+src/LeituraEstaticaStrategy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.o
+.PHONY : src/LeituraEstaticaStrategy.cpp.o
+
+src/LeituraEstaticaStrategy.i: src/LeituraEstaticaStrategy.cpp.i
+.PHONY : src/LeituraEstaticaStrategy.i
+
+# target to preprocess a source file
+src/LeituraEstaticaStrategy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.i
+.PHONY : src/LeituraEstaticaStrategy.cpp.i
+
+src/LeituraEstaticaStrategy.s: src/LeituraEstaticaStrategy.cpp.s
+.PHONY : src/LeituraEstaticaStrategy.s
+
+# target to generate assembly for a file
+src/LeituraEstaticaStrategy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.s
+.PHONY : src/LeituraEstaticaStrategy.cpp.s
+
 src/Logger.o: src/Logger.cpp.o
 .PHONY : src/Logger.o
 
@@ -248,6 +272,30 @@ src/MonitoramentoBanco.s: src/MonitoramentoBanco.cpp.s
 src/MonitoramentoBanco.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/MonitoramentoBanco.cpp.s
 .PHONY : src/MonitoramentoBanco.cpp.s
+
+src/MonitoramentoConcretoMediator.o: src/MonitoramentoConcretoMediator.cpp.o
+.PHONY : src/MonitoramentoConcretoMediator.o
+
+# target to build an object file
+src/MonitoramentoConcretoMediator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.o
+.PHONY : src/MonitoramentoConcretoMediator.cpp.o
+
+src/MonitoramentoConcretoMediator.i: src/MonitoramentoConcretoMediator.cpp.i
+.PHONY : src/MonitoramentoConcretoMediator.i
+
+# target to preprocess a source file
+src/MonitoramentoConcretoMediator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.i
+.PHONY : src/MonitoramentoConcretoMediator.cpp.i
+
+src/MonitoramentoConcretoMediator.s: src/MonitoramentoConcretoMediator.cpp.s
+.PHONY : src/MonitoramentoConcretoMediator.s
+
+# target to generate assembly for a file
+src/MonitoramentoConcretoMediator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.s
+.PHONY : src/MonitoramentoConcretoMediator.cpp.s
 
 src/MonitoramentoService.o: src/MonitoramentoService.cpp.o
 .PHONY : src/MonitoramentoService.o
@@ -297,6 +345,30 @@ src/NotificacaoService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/NotificacaoService.cpp.s
 .PHONY : src/NotificacaoService.cpp.s
 
+src/OcrStrategyFactory.o: src/OcrStrategyFactory.cpp.o
+.PHONY : src/OcrStrategyFactory.o
+
+# target to build an object file
+src/OcrStrategyFactory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.o
+.PHONY : src/OcrStrategyFactory.cpp.o
+
+src/OcrStrategyFactory.i: src/OcrStrategyFactory.cpp.i
+.PHONY : src/OcrStrategyFactory.i
+
+# target to preprocess a source file
+src/OcrStrategyFactory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.i
+.PHONY : src/OcrStrategyFactory.cpp.i
+
+src/OcrStrategyFactory.s: src/OcrStrategyFactory.cpp.s
+.PHONY : src/OcrStrategyFactory.s
+
+# target to generate assembly for a file
+src/OcrStrategyFactory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.s
+.PHONY : src/OcrStrategyFactory.cpp.s
+
 src/PerfilManager.o: src/PerfilManager.cpp.o
 .PHONY : src/PerfilManager.o
 
@@ -320,6 +392,30 @@ src/PerfilManager.s: src/PerfilManager.cpp.s
 src/PerfilManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.s
 .PHONY : src/PerfilManager.cpp.s
+
+src/TesseractOcrAdapter.o: src/TesseractOcrAdapter.cpp.o
+.PHONY : src/TesseractOcrAdapter.o
+
+# target to build an object file
+src/TesseractOcrAdapter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.o
+.PHONY : src/TesseractOcrAdapter.cpp.o
+
+src/TesseractOcrAdapter.i: src/TesseractOcrAdapter.cpp.i
+.PHONY : src/TesseractOcrAdapter.i
+
+# target to preprocess a source file
+src/TesseractOcrAdapter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.i
+.PHONY : src/TesseractOcrAdapter.cpp.i
+
+src/TesseractOcrAdapter.s: src/TesseractOcrAdapter.cpp.s
+.PHONY : src/TesseractOcrAdapter.s
+
+# target to generate assembly for a file
+src/TesseractOcrAdapter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.s
+.PHONY : src/TesseractOcrAdapter.cpp.s
 
 src/UsuarioService.o: src/UsuarioService.cpp.o
 .PHONY : src/UsuarioService.o
@@ -387,21 +483,33 @@ help:
 	@echo "... src/Fachada.o"
 	@echo "... src/Fachada.i"
 	@echo "... src/Fachada.s"
+	@echo "... src/LeituraEstaticaStrategy.o"
+	@echo "... src/LeituraEstaticaStrategy.i"
+	@echo "... src/LeituraEstaticaStrategy.s"
 	@echo "... src/Logger.o"
 	@echo "... src/Logger.i"
 	@echo "... src/Logger.s"
 	@echo "... src/MonitoramentoBanco.o"
 	@echo "... src/MonitoramentoBanco.i"
 	@echo "... src/MonitoramentoBanco.s"
+	@echo "... src/MonitoramentoConcretoMediator.o"
+	@echo "... src/MonitoramentoConcretoMediator.i"
+	@echo "... src/MonitoramentoConcretoMediator.s"
 	@echo "... src/MonitoramentoService.o"
 	@echo "... src/MonitoramentoService.i"
 	@echo "... src/MonitoramentoService.s"
 	@echo "... src/NotificacaoService.o"
 	@echo "... src/NotificacaoService.i"
 	@echo "... src/NotificacaoService.s"
+	@echo "... src/OcrStrategyFactory.o"
+	@echo "... src/OcrStrategyFactory.i"
+	@echo "... src/OcrStrategyFactory.s"
 	@echo "... src/PerfilManager.o"
 	@echo "... src/PerfilManager.i"
 	@echo "... src/PerfilManager.s"
+	@echo "... src/TesseractOcrAdapter.o"
+	@echo "... src/TesseractOcrAdapter.i"
+	@echo "... src/TesseractOcrAdapter.s"
 	@echo "... src/UsuarioService.o"
 	@echo "... src/UsuarioService.i"
 	@echo "... src/UsuarioService.s"

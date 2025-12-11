@@ -1,57 +1,107 @@
 #include "Fachada.hpp"
+#include "OcrStrategyFactory.hpp" 
+#include "MonitoramentoConcretoMediator.hpp" 
+#include "TesseractOcrAdapter.hpp"
 #include <iostream>
 
-Fachada::Fachada() : ativo(false) {
-    banco = std::make_unique<MonitoramentoBanco>();
+// Inicialização da instância estática
+Fachada* Fachada::instance = nullptr; 
+
+Fachada& Fachada::getInstance() {
+    if (instance == nullptr) {
+        instance = new Fachada(); 
+    }
+    return *instance;
+}
+
+// Configuração das Strategies (Factory Method)
+std::vector<MonitoramentoService::ShaFolder> Fachada::configurarPastas() {
+    
+    std::vector<MonitoramentoService::ShaFolder> config;
+    
+    // SHA 1: pasta do simulador principal e ROI ajustado
+    config.push_back({
+        1,
+        "/home/ayrton/Documentos/simulador_hidrometro_real/Medicoes_202311250031",
+        OcrStrategyFactory::createStrategy(StrategyType::ESTATICA, 260, 313, 545, 400, ocrAdapter)
+    });
+
+    // SHA 2: pasta do simulador analógico e ROI ajustado
+    config.push_back({
+        2,
+        "/home/ayrton/Documentos/Simulador-Hidrometro-Analogico/Medições_202311250039",
+        OcrStrategyFactory::createStrategy(StrategyType::ESTATICA, 204, 131, 360, 224, ocrAdapter)
+    });
+    
+    return config;
+}
+
+// Construtor Privado (Singleton)
+Fachada::Fachada()
+    // Apenas inicializa o Banco; UsuarioService foi removido
+    : banco(std::make_unique<MonitoramentoBanco>()),
+      ocrAdapter(std::make_shared<TesseractOcrAdapter>())
+{
+    // Inicializa o adaptador OCR
+    try {
+        ocrAdapter->inicializar();
+        ocrAdapter->definirWhitelist("0123456789");
+    } catch (const std::exception& e) {
+        std::cerr << "[ERRO] Falha ao inicializar OCR Adapter: " << e.what() << std::endl;
+        throw;
+    }
+
+    auto pastas = configurarPastas();
+    
+    // 2. Criar o Mediator, passando a referência do Banco
+    mediator = std::make_unique<MonitoramentoConcretoMediator>(*banco);
+    
+    // 3. Criar o MonitoramentoService
+    monitor = std::make_unique<MonitoramentoService>(std::move(pastas), *mediator, *banco);
+    
+    // Habilita mensagens verbosas por padrão (comportamento "como antes")
+    try {
+        setVerbose(true);
+    } catch (...) {
+        // Não falhar a construção por causa de logs; seguir sem verbose se houver problema
+    }
+
+    ativo = false;
 }
 
 Fachada::~Fachada() {
     pararMonitoramento();
-}
-
-std::vector<MonitoramentoService::ShaFolder> Fachada::configurarPastas() {
-    return std::vector<MonitoramentoService::ShaFolder> {
-        {1, "/home/ayrton/Documentos/simulador_hidrometro_real/Medicoes_202311250031", 270, 312, 550, 410},
-        {2, "/home/ayrton/Documentos/Simulador-Hidrometro-Analogico/Medições_202311250039", 205, 140, 443, 219}
-    };
+    if (ocrAdapter) {
+        ocrAdapter->finalizar();
+    }
 }
 
 void Fachada::iniciarMonitoramentoBackground() {
-    if (ativo) {
-        std::cout << "Monitoramento já está em execução." << std::endl;
-        return;
+    if (!ativo) {
+        std::cout << "[FACHADA] Inicializando Monitoramento de SHAs em thread separada..." << std::endl;
+        threadMonitoramento = std::make_unique<std::thread>(&MonitoramentoService::iniciar, monitor.get());
+        ativo = true;
     }
+}
 
-    auto pastas = configurarPastas();
-    monitor = std::make_unique<MonitoramentoService>(pastas, *banco);
-    ativo = true;
-
-    threadMonitoramento = std::make_unique<std::thread>([this]() {
-        try {
-            monitor->iniciar();
-        } catch (const std::exception& e) {
-            std::cerr << "Erro no monitoramento: " << e.what() << std::endl;
-            ativo = false;
-        }
-    });
-
-    std::cout << "Monitoramento iniciado em background." << std::endl;
+void Fachada::setVerbose(bool ativoVerbose) {
+    if (monitor) {
+        monitor->setVerbose(ativoVerbose);
+        std::cout << "[FACHADA] Verbose set to " << (ativoVerbose ? "ON" : "OFF") << std::endl;
+    }
 }
 
 void Fachada::pararMonitoramento() {
-    if (!ativo) {
-        return;
+    if (ativo) {
+        std::cout << "[FACHADA] Sinalizando encerramento do Monitoramento..." << std::endl;
+        if (threadMonitoramento->joinable()) {
+            threadMonitoramento->detach(); 
+        }
+        ativo = false;
     }
-
-    ativo = false;
-    if (threadMonitoramento && threadMonitoramento->joinable()) {
-        threadMonitoramento->join();
-    }
-    monitor.reset();
-    std::cout << "Monitoramento parado." << std::endl;
 }
 
-int Fachada::obterConsumo(int idSHA) {
+long long Fachada::obterConsumo(int idSHA) {
     return banco->getTotal(idSHA);
 }
 
@@ -60,9 +110,15 @@ int Fachada::obterUltimaLeitura(int idSHA) {
 }
 
 std::vector<int> Fachada::listarHidrometros() {
-    return {1, 2};
+    return banco->listarHidrometros();
 }
 
 bool Fachada::estaAtivo() {
     return ativo;
+}
+
+// O método gerenciarUsuarios() foi removido
+
+void Fachada::consultarLogsDeErro() {
+    std::cout << "\n[FACHADA] Orquestrando Subsistema de Logs (Placeholder)..." << std::endl;
 }

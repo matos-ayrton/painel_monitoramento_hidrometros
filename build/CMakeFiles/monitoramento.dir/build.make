@@ -69,19 +69,19 @@ include CMakeFiles/monitoramento.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/monitoramento.dir/flags.make
 
-CMakeFiles/monitoramento.dir/src/AlertService.cpp.o: CMakeFiles/monitoramento.dir/flags.make
-CMakeFiles/monitoramento.dir/src/AlertService.cpp.o: /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/AlertService.cpp
-CMakeFiles/monitoramento.dir/src/AlertService.cpp.o: CMakeFiles/monitoramento.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/monitoramento.dir/src/AlertService.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monitoramento.dir/src/AlertService.cpp.o -MF CMakeFiles/monitoramento.dir/src/AlertService.cpp.o.d -o CMakeFiles/monitoramento.dir/src/AlertService.cpp.o -c /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/AlertService.cpp
+CMakeFiles/monitoramento.dir/src/main.cpp.o: CMakeFiles/monitoramento.dir/flags.make
+CMakeFiles/monitoramento.dir/src/main.cpp.o: /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/main.cpp
+CMakeFiles/monitoramento.dir/src/main.cpp.o: CMakeFiles/monitoramento.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/monitoramento.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monitoramento.dir/src/main.cpp.o -MF CMakeFiles/monitoramento.dir/src/main.cpp.o.d -o CMakeFiles/monitoramento.dir/src/main.cpp.o -c /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/main.cpp
 
-CMakeFiles/monitoramento.dir/src/AlertService.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/monitoramento.dir/src/AlertService.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/AlertService.cpp > CMakeFiles/monitoramento.dir/src/AlertService.cpp.i
+CMakeFiles/monitoramento.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/monitoramento.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/main.cpp > CMakeFiles/monitoramento.dir/src/main.cpp.i
 
-CMakeFiles/monitoramento.dir/src/AlertService.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/monitoramento.dir/src/AlertService.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/AlertService.cpp -o CMakeFiles/monitoramento.dir/src/AlertService.cpp.s
+CMakeFiles/monitoramento.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/monitoramento.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/main.cpp -o CMakeFiles/monitoramento.dir/src/main.cpp.s
 
 CMakeFiles/monitoramento.dir/src/CLI.cpp.o: CMakeFiles/monitoramento.dir/flags.make
 CMakeFiles/monitoramento.dir/src/CLI.cpp.o: /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/CLI.cpp
@@ -111,10 +111,80 @@ CMakeFiles/monitoramento.dir/src/Fachada.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/monitoramento.dir/src/Fachada.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/Fachada.cpp -o CMakeFiles/monitoramento.dir/src/Fachada.cpp.s
 
+CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.o: CMakeFiles/monitoramento.dir/flags.make
+CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.o: /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/MonitoramentoConcretoMediator.cpp
+CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.o: CMakeFiles/monitoramento.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.o -MF CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.o.d -o CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.o -c /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/MonitoramentoConcretoMediator.cpp
+
+CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/MonitoramentoConcretoMediator.cpp > CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.i
+
+CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/MonitoramentoConcretoMediator.cpp -o CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.s
+
+CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.o: CMakeFiles/monitoramento.dir/flags.make
+CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.o: /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/OcrStrategyFactory.cpp
+CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.o: CMakeFiles/monitoramento.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.o -MF CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.o.d -o CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.o -c /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/OcrStrategyFactory.cpp
+
+CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/OcrStrategyFactory.cpp > CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.i
+
+CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/OcrStrategyFactory.cpp -o CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.s
+
+CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.o: CMakeFiles/monitoramento.dir/flags.make
+CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.o: /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/LeituraEstaticaStrategy.cpp
+CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.o: CMakeFiles/monitoramento.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.o -MF CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.o.d -o CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.o -c /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/LeituraEstaticaStrategy.cpp
+
+CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/LeituraEstaticaStrategy.cpp > CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.i
+
+CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/LeituraEstaticaStrategy.cpp -o CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.s
+
+CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.o: CMakeFiles/monitoramento.dir/flags.make
+CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.o: /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/TesseractOcrAdapter.cpp
+CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.o: CMakeFiles/monitoramento.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.o -MF CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.o.d -o CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.o -c /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/TesseractOcrAdapter.cpp
+
+CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/TesseractOcrAdapter.cpp > CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.i
+
+CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/TesseractOcrAdapter.cpp -o CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.s
+
+CMakeFiles/monitoramento.dir/src/AlertService.cpp.o: CMakeFiles/monitoramento.dir/flags.make
+CMakeFiles/monitoramento.dir/src/AlertService.cpp.o: /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/AlertService.cpp
+CMakeFiles/monitoramento.dir/src/AlertService.cpp.o: CMakeFiles/monitoramento.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/monitoramento.dir/src/AlertService.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monitoramento.dir/src/AlertService.cpp.o -MF CMakeFiles/monitoramento.dir/src/AlertService.cpp.o.d -o CMakeFiles/monitoramento.dir/src/AlertService.cpp.o -c /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/AlertService.cpp
+
+CMakeFiles/monitoramento.dir/src/AlertService.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/monitoramento.dir/src/AlertService.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/AlertService.cpp > CMakeFiles/monitoramento.dir/src/AlertService.cpp.i
+
+CMakeFiles/monitoramento.dir/src/AlertService.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/monitoramento.dir/src/AlertService.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/AlertService.cpp -o CMakeFiles/monitoramento.dir/src/AlertService.cpp.s
+
 CMakeFiles/monitoramento.dir/src/Logger.cpp.o: CMakeFiles/monitoramento.dir/flags.make
 CMakeFiles/monitoramento.dir/src/Logger.cpp.o: /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/Logger.cpp
 CMakeFiles/monitoramento.dir/src/Logger.cpp.o: CMakeFiles/monitoramento.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/monitoramento.dir/src/Logger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/monitoramento.dir/src/Logger.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monitoramento.dir/src/Logger.cpp.o -MF CMakeFiles/monitoramento.dir/src/Logger.cpp.o.d -o CMakeFiles/monitoramento.dir/src/Logger.cpp.o -c /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/Logger.cpp
 
 CMakeFiles/monitoramento.dir/src/Logger.cpp.i: cmake_force
@@ -128,7 +198,7 @@ CMakeFiles/monitoramento.dir/src/Logger.cpp.s: cmake_force
 CMakeFiles/monitoramento.dir/src/MonitoramentoBanco.cpp.o: CMakeFiles/monitoramento.dir/flags.make
 CMakeFiles/monitoramento.dir/src/MonitoramentoBanco.cpp.o: /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/MonitoramentoBanco.cpp
 CMakeFiles/monitoramento.dir/src/MonitoramentoBanco.cpp.o: CMakeFiles/monitoramento.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/monitoramento.dir/src/MonitoramentoBanco.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/monitoramento.dir/src/MonitoramentoBanco.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monitoramento.dir/src/MonitoramentoBanco.cpp.o -MF CMakeFiles/monitoramento.dir/src/MonitoramentoBanco.cpp.o.d -o CMakeFiles/monitoramento.dir/src/MonitoramentoBanco.cpp.o -c /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/MonitoramentoBanco.cpp
 
 CMakeFiles/monitoramento.dir/src/MonitoramentoBanco.cpp.i: cmake_force
@@ -142,7 +212,7 @@ CMakeFiles/monitoramento.dir/src/MonitoramentoBanco.cpp.s: cmake_force
 CMakeFiles/monitoramento.dir/src/MonitoramentoService.cpp.o: CMakeFiles/monitoramento.dir/flags.make
 CMakeFiles/monitoramento.dir/src/MonitoramentoService.cpp.o: /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/MonitoramentoService.cpp
 CMakeFiles/monitoramento.dir/src/MonitoramentoService.cpp.o: CMakeFiles/monitoramento.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/monitoramento.dir/src/MonitoramentoService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/monitoramento.dir/src/MonitoramentoService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monitoramento.dir/src/MonitoramentoService.cpp.o -MF CMakeFiles/monitoramento.dir/src/MonitoramentoService.cpp.o.d -o CMakeFiles/monitoramento.dir/src/MonitoramentoService.cpp.o -c /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/MonitoramentoService.cpp
 
 CMakeFiles/monitoramento.dir/src/MonitoramentoService.cpp.i: cmake_force
@@ -156,7 +226,7 @@ CMakeFiles/monitoramento.dir/src/MonitoramentoService.cpp.s: cmake_force
 CMakeFiles/monitoramento.dir/src/NotificacaoService.cpp.o: CMakeFiles/monitoramento.dir/flags.make
 CMakeFiles/monitoramento.dir/src/NotificacaoService.cpp.o: /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/NotificacaoService.cpp
 CMakeFiles/monitoramento.dir/src/NotificacaoService.cpp.o: CMakeFiles/monitoramento.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/monitoramento.dir/src/NotificacaoService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/monitoramento.dir/src/NotificacaoService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monitoramento.dir/src/NotificacaoService.cpp.o -MF CMakeFiles/monitoramento.dir/src/NotificacaoService.cpp.o.d -o CMakeFiles/monitoramento.dir/src/NotificacaoService.cpp.o -c /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/NotificacaoService.cpp
 
 CMakeFiles/monitoramento.dir/src/NotificacaoService.cpp.i: cmake_force
@@ -170,7 +240,7 @@ CMakeFiles/monitoramento.dir/src/NotificacaoService.cpp.s: cmake_force
 CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.o: CMakeFiles/monitoramento.dir/flags.make
 CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.o: /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/PerfilManager.cpp
 CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.o: CMakeFiles/monitoramento.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.o -MF CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.o.d -o CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.o -c /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/PerfilManager.cpp
 
 CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.i: cmake_force
@@ -184,7 +254,7 @@ CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.s: cmake_force
 CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.o: CMakeFiles/monitoramento.dir/flags.make
 CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.o: /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/UsuarioService.cpp
 CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.o: CMakeFiles/monitoramento.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.o -MF CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.o.d -o CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.o -c /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/UsuarioService.cpp
 
 CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.i: cmake_force
@@ -195,46 +265,40 @@ CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/UsuarioService.cpp -o CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.s
 
-CMakeFiles/monitoramento.dir/src/main.cpp.o: CMakeFiles/monitoramento.dir/flags.make
-CMakeFiles/monitoramento.dir/src/main.cpp.o: /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/main.cpp
-CMakeFiles/monitoramento.dir/src/main.cpp.o: CMakeFiles/monitoramento.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/monitoramento.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monitoramento.dir/src/main.cpp.o -MF CMakeFiles/monitoramento.dir/src/main.cpp.o.d -o CMakeFiles/monitoramento.dir/src/main.cpp.o -c /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/main.cpp
-
-CMakeFiles/monitoramento.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/monitoramento.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/main.cpp > CMakeFiles/monitoramento.dir/src/main.cpp.i
-
-CMakeFiles/monitoramento.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/monitoramento.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/main.cpp -o CMakeFiles/monitoramento.dir/src/main.cpp.s
-
 # Object files for target monitoramento
 monitoramento_OBJECTS = \
-"CMakeFiles/monitoramento.dir/src/AlertService.cpp.o" \
+"CMakeFiles/monitoramento.dir/src/main.cpp.o" \
 "CMakeFiles/monitoramento.dir/src/CLI.cpp.o" \
 "CMakeFiles/monitoramento.dir/src/Fachada.cpp.o" \
+"CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.o" \
+"CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.o" \
+"CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.o" \
+"CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.o" \
+"CMakeFiles/monitoramento.dir/src/AlertService.cpp.o" \
 "CMakeFiles/monitoramento.dir/src/Logger.cpp.o" \
 "CMakeFiles/monitoramento.dir/src/MonitoramentoBanco.cpp.o" \
 "CMakeFiles/monitoramento.dir/src/MonitoramentoService.cpp.o" \
 "CMakeFiles/monitoramento.dir/src/NotificacaoService.cpp.o" \
 "CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.o" \
-"CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.o" \
-"CMakeFiles/monitoramento.dir/src/main.cpp.o"
+"CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.o"
 
 # External object files for target monitoramento
 monitoramento_EXTERNAL_OBJECTS =
 
-monitoramento: CMakeFiles/monitoramento.dir/src/AlertService.cpp.o
+monitoramento: CMakeFiles/monitoramento.dir/src/main.cpp.o
 monitoramento: CMakeFiles/monitoramento.dir/src/CLI.cpp.o
 monitoramento: CMakeFiles/monitoramento.dir/src/Fachada.cpp.o
+monitoramento: CMakeFiles/monitoramento.dir/src/MonitoramentoConcretoMediator.cpp.o
+monitoramento: CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.o
+monitoramento: CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.o
+monitoramento: CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.o
+monitoramento: CMakeFiles/monitoramento.dir/src/AlertService.cpp.o
 monitoramento: CMakeFiles/monitoramento.dir/src/Logger.cpp.o
 monitoramento: CMakeFiles/monitoramento.dir/src/MonitoramentoBanco.cpp.o
 monitoramento: CMakeFiles/monitoramento.dir/src/MonitoramentoService.cpp.o
 monitoramento: CMakeFiles/monitoramento.dir/src/NotificacaoService.cpp.o
 monitoramento: CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.o
 monitoramento: CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.o
-monitoramento: CMakeFiles/monitoramento.dir/src/main.cpp.o
 monitoramento: CMakeFiles/monitoramento.dir/build.make
 monitoramento: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.6.0
 monitoramento: /usr/lib/x86_64-linux-gnu/libopencv_alphamat.so.4.6.0
@@ -292,7 +356,7 @@ monitoramento: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.6.0
 monitoramento: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0
 monitoramento: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
 monitoramento: CMakeFiles/monitoramento.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable monitoramento"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable monitoramento"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/monitoramento.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

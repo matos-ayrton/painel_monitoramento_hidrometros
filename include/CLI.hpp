@@ -1,18 +1,15 @@
 #ifndef CLI_HPP
 #define CLI_HPP
 
-#include <memory>
 #include "Fachada.hpp"
 
 class CLI {
 public:
-    CLI(std::unique_ptr<Fachada> fachada);
-
-    // Executar o loop interativo da CLI
+    CLI(Fachada& fachada);
     void executar();
 
 private:
-    std::unique_ptr<Fachada> fachada;
+    Fachada& fachada; 
 
     void exibirMenu();
     void consultarConsumo();

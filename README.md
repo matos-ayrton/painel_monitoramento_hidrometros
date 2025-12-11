@@ -45,10 +45,6 @@ Sistema desenvolvido para monitoramento inteligente de hidrômetros, permitindo:
 
 ## 🛠️ Tecnologias
 
-- Python
-- Flask/Django
-- PostgreSQL/MySQL
-- HTML/CSS/JavaScript
 
 ---
 
@@ -60,12 +56,6 @@ git clone https://github.com/SEU_USUARIO/painel_monitoramento_hidrometros.git
 
 # Entre na pasta
 cd painel_monitoramento_hidrometros
-
-# Instale as dependências
-pip install -r requirements.txt
-
-# Execute o projeto
-python main.py
 ```
 
 

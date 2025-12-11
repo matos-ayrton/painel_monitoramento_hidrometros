@@ -1,6 +1,7 @@
 CMakeFiles/monitoramento.dir/src/main.cpp.o: \
  /home/ayrton/Documentos/painel_monitoramento_hidrometros/src/main.cpp \
  /usr/include/stdc-predef.h \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/CLI.hpp \
  /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/Fachada.hpp \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -173,6 +174,11 @@ CMakeFiles/monitoramento.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/hashtable.h \
  /usr/include/c++/13/bits/hashtable_policy.h \
  /usr/include/c++/13/bits/enable_special_members.h \
+ /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/bits/algorithmfwd.h \
+ /usr/include/c++/13/bits/stl_heap.h \
+ /usr/include/c++/13/bits/uniform_int_dist.h \
+ /usr/include/c++/13/pstl/glue_algorithm_defs.h \
  /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/MonitoramentoService.hpp \
  /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
  /usr/include/c++/13/system_error \
@@ -202,6 +208,9 @@ CMakeFiles/monitoramento.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/istream.tcc \
  /usr/include/c++/13/bits/sstream.tcc /usr/include/c++/13/codecvt \
  /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/ILeituraStrategy.hpp \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/IMonitoramentoMediator.hpp \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/IOcrAdapter.hpp \
  /usr/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/include/opencv4/opencv2/core.hpp \
@@ -224,11 +233,6 @@ CMakeFiles/monitoramento.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
- /usr/include/c++/13/bits/algorithmfwd.h \
- /usr/include/c++/13/bits/stl_heap.h \
- /usr/include/c++/13/bits/uniform_int_dist.h \
- /usr/include/c++/13/pstl/glue_algorithm_defs.h \
  /usr/include/opencv4/opencv2/core/cvstd.hpp /usr/include/c++/13/cstring \
  /usr/include/string.h /usr/include/strings.h /usr/include/c++/13/utility \
  /usr/include/c++/13/bits/stl_relops.h /usr/include/c++/13/cmath \
@@ -362,12 +366,4 @@ CMakeFiles/monitoramento.dir/src/main.cpp.o: \
  /usr/include/opencv4/opencv2/video.hpp \
  /usr/include/opencv4/opencv2/video/tracking.hpp \
  /usr/include/opencv4/opencv2/video/background_segm.hpp \
- /usr/include/tesseract/baseapi.h /usr/include/tesseract/export.h \
- /usr/include/tesseract/pageiterator.h \
- /usr/include/tesseract/publictypes.h \
- /usr/include/tesseract/resultiterator.h \
- /usr/include/tesseract/ltrresultiterator.h \
- /usr/include/tesseract/unichar.h /usr/include/memory.h \
- /usr/include/tesseract/version.h \
- /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/CLI.hpp \
  /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/Fachada.hpp

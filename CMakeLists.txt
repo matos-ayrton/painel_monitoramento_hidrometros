@@ -15,9 +15,26 @@ include_directories(${TESSERACT_INCLUDE_DIRS})
 # 2. ENCONTRAR O OPENCV
 find_package(OpenCV REQUIRED)
 
-# Define o nome do executável e lista todos os arquivos .cpp
-# Isso encontra todos os arquivos *.cpp na pasta 'src'
-file(GLOB SOURCE_FILES "src/*.cpp")
+# Define o nome do executável e lista explicitamente todos os arquivos .cpp
+# Listagem explícita evita problemas com glob e garante inclusão dos novos arquivos
+set(SOURCE_FILES
+    src/main.cpp
+    src/CLI.cpp
+    src/Fachada.cpp
+    src/MonitoramentoConcretoMediator.cpp
+    src/OcrStrategyFactory.cpp
+    src/LeituraEstaticaStrategy.cpp
+    src/TesseractOcrAdapter.cpp
+    # HidrometroConfigManager removed by user request
+    src/AlertService.cpp
+    src/Logger.cpp
+    src/MonitoramentoBanco.cpp
+    src/MonitoramentoService.cpp
+    src/NotificacaoService.cpp
+    src/PerfilManager.cpp
+    src/UsuarioService.cpp
+)
+
 add_executable(monitoramento ${SOURCE_FILES})
 
 # Linka o executável com as bibliotecas
