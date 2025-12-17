@@ -16,6 +16,7 @@ public:
 
     void inicializar() override;
     void finalizar() override;
+    bool isInitialized() override;
     std::string extrairTexto(const cv::Mat& imagem,
                             int roiX, int roiY,
                             int roiWidth, int roiHeight) override;

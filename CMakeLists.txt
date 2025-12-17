@@ -15,6 +15,9 @@ include_directories(${TESSERACT_INCLUDE_DIRS})
 # 2. ENCONTRAR O OPENCV
 find_package(OpenCV REQUIRED)
 
+# 3. ENCONTRAR LIBCURL (Novo)
+find_package(CURL REQUIRED)
+
 # Define o nome do executável e lista explicitamente todos os arquivos .cpp
 # Listagem explícita evita problemas com glob e garante inclusão dos novos arquivos
 set(SOURCE_FILES
@@ -25,13 +28,18 @@ set(SOURCE_FILES
     src/OcrStrategyFactory.cpp
     src/LeituraEstaticaStrategy.cpp
     src/TesseractOcrAdapter.cpp
-    # HidrometroConfigManager removed by user request
     src/AlertService.cpp
     src/Logger.cpp
     src/MonitoramentoBanco.cpp
     src/MonitoramentoService.cpp
     src/NotificacaoService.cpp
+    src/EmailNotificacaoStrategy.cpp
+    src/SMSNotificacaoStrategy.cpp
+    src/WebhookNotificacaoStrategy.cpp
     src/PerfilManager.cpp
+    src/UsuarioService.cpp
+    src/DB.cpp
+    src/UserBuilder.cpp
     src/UsuarioService.cpp
 )
 
@@ -43,4 +51,10 @@ target_link_libraries(monitoramento
     ${TESSERACT_LIBRARIES}
     ${OpenCV_LIBS}
     pthread # Essencial para std::thread
+    sqlite3
+    CURL::libcurl
 )
+
+# Executável utilitário para encontrar ROI
+add_executable(find_roi src/find_roi.cpp)
+target_link_libraries(find_roi ${OpenCV_LIBS})

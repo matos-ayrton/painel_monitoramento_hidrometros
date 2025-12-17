@@ -1,3 +1,4 @@
 /home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles/monitoramento.dir
+/home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles/find_roi.dir
 /home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles/edit_cache.dir
 /home/ayrton/Documentos/painel_monitoramento_hidrometros/build/CMakeFiles/rebuild_cache.dir

@@ -42,6 +42,8 @@ public:
      * @param whitelist String com caracteres válidos (ex: "0123456789")
      */
     virtual void definirWhitelist(const std::string& whitelist) = 0;
+
+    virtual bool isInitialized() = 0;
 };
 
 #endif

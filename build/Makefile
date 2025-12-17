@@ -129,6 +129,19 @@ monitoramento/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/build
 .PHONY : monitoramento/fast
 
+#=============================================================================
+# Target rules for targets named find_roi
+
+# Build rule for target.
+find_roi: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 find_roi
+.PHONY : find_roi
+
+# fast build rule for target.
+find_roi/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_roi.dir/build.make CMakeFiles/find_roi.dir/build
+.PHONY : find_roi/fast
+
 src/AlertService.o: src/AlertService.cpp.o
 .PHONY : src/AlertService.o
 
@@ -176,6 +189,54 @@ src/CLI.s: src/CLI.cpp.s
 src/CLI.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/CLI.cpp.s
 .PHONY : src/CLI.cpp.s
+
+src/DB.o: src/DB.cpp.o
+.PHONY : src/DB.o
+
+# target to build an object file
+src/DB.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/DB.cpp.o
+.PHONY : src/DB.cpp.o
+
+src/DB.i: src/DB.cpp.i
+.PHONY : src/DB.i
+
+# target to preprocess a source file
+src/DB.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/DB.cpp.i
+.PHONY : src/DB.cpp.i
+
+src/DB.s: src/DB.cpp.s
+.PHONY : src/DB.s
+
+# target to generate assembly for a file
+src/DB.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/DB.cpp.s
+.PHONY : src/DB.cpp.s
+
+src/EmailNotificacaoStrategy.o: src/EmailNotificacaoStrategy.cpp.o
+.PHONY : src/EmailNotificacaoStrategy.o
+
+# target to build an object file
+src/EmailNotificacaoStrategy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/EmailNotificacaoStrategy.cpp.o
+.PHONY : src/EmailNotificacaoStrategy.cpp.o
+
+src/EmailNotificacaoStrategy.i: src/EmailNotificacaoStrategy.cpp.i
+.PHONY : src/EmailNotificacaoStrategy.i
+
+# target to preprocess a source file
+src/EmailNotificacaoStrategy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/EmailNotificacaoStrategy.cpp.i
+.PHONY : src/EmailNotificacaoStrategy.cpp.i
+
+src/EmailNotificacaoStrategy.s: src/EmailNotificacaoStrategy.cpp.s
+.PHONY : src/EmailNotificacaoStrategy.s
+
+# target to generate assembly for a file
+src/EmailNotificacaoStrategy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/EmailNotificacaoStrategy.cpp.s
+.PHONY : src/EmailNotificacaoStrategy.cpp.s
 
 src/Fachada.o: src/Fachada.cpp.o
 .PHONY : src/Fachada.o
@@ -393,6 +454,30 @@ src/PerfilManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.s
 .PHONY : src/PerfilManager.cpp.s
 
+src/SMSNotificacaoStrategy.o: src/SMSNotificacaoStrategy.cpp.o
+.PHONY : src/SMSNotificacaoStrategy.o
+
+# target to build an object file
+src/SMSNotificacaoStrategy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/SMSNotificacaoStrategy.cpp.o
+.PHONY : src/SMSNotificacaoStrategy.cpp.o
+
+src/SMSNotificacaoStrategy.i: src/SMSNotificacaoStrategy.cpp.i
+.PHONY : src/SMSNotificacaoStrategy.i
+
+# target to preprocess a source file
+src/SMSNotificacaoStrategy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/SMSNotificacaoStrategy.cpp.i
+.PHONY : src/SMSNotificacaoStrategy.cpp.i
+
+src/SMSNotificacaoStrategy.s: src/SMSNotificacaoStrategy.cpp.s
+.PHONY : src/SMSNotificacaoStrategy.s
+
+# target to generate assembly for a file
+src/SMSNotificacaoStrategy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/SMSNotificacaoStrategy.cpp.s
+.PHONY : src/SMSNotificacaoStrategy.cpp.s
+
 src/TesseractOcrAdapter.o: src/TesseractOcrAdapter.cpp.o
 .PHONY : src/TesseractOcrAdapter.o
 
@@ -417,6 +502,30 @@ src/TesseractOcrAdapter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.s
 .PHONY : src/TesseractOcrAdapter.cpp.s
 
+src/UserBuilder.o: src/UserBuilder.cpp.o
+.PHONY : src/UserBuilder.o
+
+# target to build an object file
+src/UserBuilder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/UserBuilder.cpp.o
+.PHONY : src/UserBuilder.cpp.o
+
+src/UserBuilder.i: src/UserBuilder.cpp.i
+.PHONY : src/UserBuilder.i
+
+# target to preprocess a source file
+src/UserBuilder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/UserBuilder.cpp.i
+.PHONY : src/UserBuilder.cpp.i
+
+src/UserBuilder.s: src/UserBuilder.cpp.s
+.PHONY : src/UserBuilder.s
+
+# target to generate assembly for a file
+src/UserBuilder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/UserBuilder.cpp.s
+.PHONY : src/UserBuilder.cpp.s
+
 src/UsuarioService.o: src/UsuarioService.cpp.o
 .PHONY : src/UsuarioService.o
 
@@ -440,6 +549,54 @@ src/UsuarioService.s: src/UsuarioService.cpp.s
 src/UsuarioService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.s
 .PHONY : src/UsuarioService.cpp.s
+
+src/WebhookNotificacaoStrategy.o: src/WebhookNotificacaoStrategy.cpp.o
+.PHONY : src/WebhookNotificacaoStrategy.o
+
+# target to build an object file
+src/WebhookNotificacaoStrategy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/WebhookNotificacaoStrategy.cpp.o
+.PHONY : src/WebhookNotificacaoStrategy.cpp.o
+
+src/WebhookNotificacaoStrategy.i: src/WebhookNotificacaoStrategy.cpp.i
+.PHONY : src/WebhookNotificacaoStrategy.i
+
+# target to preprocess a source file
+src/WebhookNotificacaoStrategy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/WebhookNotificacaoStrategy.cpp.i
+.PHONY : src/WebhookNotificacaoStrategy.cpp.i
+
+src/WebhookNotificacaoStrategy.s: src/WebhookNotificacaoStrategy.cpp.s
+.PHONY : src/WebhookNotificacaoStrategy.s
+
+# target to generate assembly for a file
+src/WebhookNotificacaoStrategy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitoramento.dir/build.make CMakeFiles/monitoramento.dir/src/WebhookNotificacaoStrategy.cpp.s
+.PHONY : src/WebhookNotificacaoStrategy.cpp.s
+
+src/find_roi.o: src/find_roi.cpp.o
+.PHONY : src/find_roi.o
+
+# target to build an object file
+src/find_roi.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_roi.dir/build.make CMakeFiles/find_roi.dir/src/find_roi.cpp.o
+.PHONY : src/find_roi.cpp.o
+
+src/find_roi.i: src/find_roi.cpp.i
+.PHONY : src/find_roi.i
+
+# target to preprocess a source file
+src/find_roi.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_roi.dir/build.make CMakeFiles/find_roi.dir/src/find_roi.cpp.i
+.PHONY : src/find_roi.cpp.i
+
+src/find_roi.s: src/find_roi.cpp.s
+.PHONY : src/find_roi.s
+
+# target to generate assembly for a file
+src/find_roi.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_roi.dir/build.make CMakeFiles/find_roi.dir/src/find_roi.cpp.s
+.PHONY : src/find_roi.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -473,6 +630,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... find_roi"
 	@echo "... monitoramento"
 	@echo "... src/AlertService.o"
 	@echo "... src/AlertService.i"
@@ -480,6 +638,12 @@ help:
 	@echo "... src/CLI.o"
 	@echo "... src/CLI.i"
 	@echo "... src/CLI.s"
+	@echo "... src/DB.o"
+	@echo "... src/DB.i"
+	@echo "... src/DB.s"
+	@echo "... src/EmailNotificacaoStrategy.o"
+	@echo "... src/EmailNotificacaoStrategy.i"
+	@echo "... src/EmailNotificacaoStrategy.s"
 	@echo "... src/Fachada.o"
 	@echo "... src/Fachada.i"
 	@echo "... src/Fachada.s"
@@ -507,12 +671,24 @@ help:
 	@echo "... src/PerfilManager.o"
 	@echo "... src/PerfilManager.i"
 	@echo "... src/PerfilManager.s"
+	@echo "... src/SMSNotificacaoStrategy.o"
+	@echo "... src/SMSNotificacaoStrategy.i"
+	@echo "... src/SMSNotificacaoStrategy.s"
 	@echo "... src/TesseractOcrAdapter.o"
 	@echo "... src/TesseractOcrAdapter.i"
 	@echo "... src/TesseractOcrAdapter.s"
+	@echo "... src/UserBuilder.o"
+	@echo "... src/UserBuilder.i"
+	@echo "... src/UserBuilder.s"
 	@echo "... src/UsuarioService.o"
 	@echo "... src/UsuarioService.i"
 	@echo "... src/UsuarioService.s"
+	@echo "... src/WebhookNotificacaoStrategy.o"
+	@echo "... src/WebhookNotificacaoStrategy.i"
+	@echo "... src/WebhookNotificacaoStrategy.s"
+	@echo "... src/find_roi.o"
+	@echo "... src/find_roi.i"
+	@echo "... src/find_roi.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

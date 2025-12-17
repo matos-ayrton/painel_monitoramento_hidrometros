@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ayrton/Documentos/painel_monitoramento_hidrometros/src/AlertService.cpp" "CMakeFiles/monitoramento.dir/src/AlertService.cpp.o" "gcc" "CMakeFiles/monitoramento.dir/src/AlertService.cpp.o.d"
   "/home/ayrton/Documentos/painel_monitoramento_hidrometros/src/CLI.cpp" "CMakeFiles/monitoramento.dir/src/CLI.cpp.o" "gcc" "CMakeFiles/monitoramento.dir/src/CLI.cpp.o.d"
+  "/home/ayrton/Documentos/painel_monitoramento_hidrometros/src/DB.cpp" "CMakeFiles/monitoramento.dir/src/DB.cpp.o" "gcc" "CMakeFiles/monitoramento.dir/src/DB.cpp.o.d"
+  "/home/ayrton/Documentos/painel_monitoramento_hidrometros/src/EmailNotificacaoStrategy.cpp" "CMakeFiles/monitoramento.dir/src/EmailNotificacaoStrategy.cpp.o" "gcc" "CMakeFiles/monitoramento.dir/src/EmailNotificacaoStrategy.cpp.o.d"
   "/home/ayrton/Documentos/painel_monitoramento_hidrometros/src/Fachada.cpp" "CMakeFiles/monitoramento.dir/src/Fachada.cpp.o" "gcc" "CMakeFiles/monitoramento.dir/src/Fachada.cpp.o.d"
   "/home/ayrton/Documentos/painel_monitoramento_hidrometros/src/LeituraEstaticaStrategy.cpp" "CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.o" "gcc" "CMakeFiles/monitoramento.dir/src/LeituraEstaticaStrategy.cpp.o.d"
   "/home/ayrton/Documentos/painel_monitoramento_hidrometros/src/Logger.cpp" "CMakeFiles/monitoramento.dir/src/Logger.cpp.o" "gcc" "CMakeFiles/monitoramento.dir/src/Logger.cpp.o.d"
@@ -19,8 +21,11 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ayrton/Documentos/painel_monitoramento_hidrometros/src/NotificacaoService.cpp" "CMakeFiles/monitoramento.dir/src/NotificacaoService.cpp.o" "gcc" "CMakeFiles/monitoramento.dir/src/NotificacaoService.cpp.o.d"
   "/home/ayrton/Documentos/painel_monitoramento_hidrometros/src/OcrStrategyFactory.cpp" "CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.o" "gcc" "CMakeFiles/monitoramento.dir/src/OcrStrategyFactory.cpp.o.d"
   "/home/ayrton/Documentos/painel_monitoramento_hidrometros/src/PerfilManager.cpp" "CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.o" "gcc" "CMakeFiles/monitoramento.dir/src/PerfilManager.cpp.o.d"
+  "/home/ayrton/Documentos/painel_monitoramento_hidrometros/src/SMSNotificacaoStrategy.cpp" "CMakeFiles/monitoramento.dir/src/SMSNotificacaoStrategy.cpp.o" "gcc" "CMakeFiles/monitoramento.dir/src/SMSNotificacaoStrategy.cpp.o.d"
   "/home/ayrton/Documentos/painel_monitoramento_hidrometros/src/TesseractOcrAdapter.cpp" "CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.o" "gcc" "CMakeFiles/monitoramento.dir/src/TesseractOcrAdapter.cpp.o.d"
+  "/home/ayrton/Documentos/painel_monitoramento_hidrometros/src/UserBuilder.cpp" "CMakeFiles/monitoramento.dir/src/UserBuilder.cpp.o" "gcc" "CMakeFiles/monitoramento.dir/src/UserBuilder.cpp.o.d"
   "/home/ayrton/Documentos/painel_monitoramento_hidrometros/src/UsuarioService.cpp" "CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.o" "gcc" "CMakeFiles/monitoramento.dir/src/UsuarioService.cpp.o.d"
+  "/home/ayrton/Documentos/painel_monitoramento_hidrometros/src/WebhookNotificacaoStrategy.cpp" "CMakeFiles/monitoramento.dir/src/WebhookNotificacaoStrategy.cpp.o" "gcc" "CMakeFiles/monitoramento.dir/src/WebhookNotificacaoStrategy.cpp.o.d"
   "/home/ayrton/Documentos/painel_monitoramento_hidrometros/src/main.cpp" "CMakeFiles/monitoramento.dir/src/main.cpp.o" "gcc" "CMakeFiles/monitoramento.dir/src/main.cpp.o.d"
   )
 

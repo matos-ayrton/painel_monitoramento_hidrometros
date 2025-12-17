@@ -3,6 +3,8 @@ CMakeFiles/monitoramento.dir/src/CLI.cpp.o: \
  /usr/include/stdc-predef.h \
  /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/CLI.hpp \
  /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/Fachada.hpp \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/AlertService.hpp \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/IObserver.hpp \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -117,17 +119,10 @@ CMakeFiles/monitoramento.dir/src/CLI.cpp.o: \
  /usr/include/c++/13/bits/memory_resource.h /usr/include/c++/13/cstddef \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
- /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
- /usr/include/c++/13/bits/stl_vector.h \
- /usr/include/c++/13/bits/stl_bvector.h \
- /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/map \
- /usr/include/c++/13/bits/stl_tree.h \
- /usr/include/c++/13/ext/aligned_buffer.h \
- /usr/include/c++/13/bits/node_handle.h \
- /usr/include/c++/13/bits/stl_map.h \
- /usr/include/c++/13/bits/stl_multimap.h \
- /usr/include/c++/13/bits/erase_if.h /usr/include/c++/13/memory \
- /usr/include/c++/13/bits/stl_tempbuf.h \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/NotificacaoService.hpp \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/INotificacaoStrategy.hpp \
+ /usr/include/c++/13/memory /usr/include/c++/13/bits/stl_tempbuf.h \
+ /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
  /usr/include/c++/13/bits/align.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
@@ -137,6 +132,7 @@ CMakeFiles/monitoramento.dir/src/CLI.cpp.o: \
  /usr/include/c++/13/bits/shared_ptr.h \
  /usr/include/c++/13/bits/shared_ptr_base.h /usr/include/c++/13/typeinfo \
  /usr/include/c++/13/bits/allocated_ptr.h \
+ /usr/include/c++/13/ext/aligned_buffer.h \
  /usr/include/c++/13/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
@@ -162,53 +158,25 @@ CMakeFiles/monitoramento.dir/src/CLI.cpp.o: \
  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
- /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/thread \
- /usr/include/c++/13/bits/std_thread.h \
- /usr/include/c++/13/bits/this_thread_sleep.h \
+ /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/mutex \
  /usr/include/c++/13/bits/chrono.h /usr/include/c++/13/ratio \
  /usr/include/c++/13/cstdint /usr/include/c++/13/limits \
  /usr/include/c++/13/ctime /usr/include/c++/13/bits/parse_numbers.h \
- /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/MonitoramentoBanco.hpp \
- /usr/include/c++/13/unordered_map \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
+ /usr/include/c++/13/bits/std_mutex.h \
+ /usr/include/c++/13/bits/unique_lock.h /usr/include/c++/13/unordered_map \
  /usr/include/c++/13/bits/unordered_map.h \
  /usr/include/c++/13/bits/hashtable.h \
  /usr/include/c++/13/bits/hashtable_policy.h \
  /usr/include/c++/13/bits/enable_special_members.h \
- /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
- /usr/include/c++/13/bits/algorithmfwd.h \
- /usr/include/c++/13/bits/stl_heap.h \
- /usr/include/c++/13/bits/uniform_int_dist.h \
- /usr/include/c++/13/pstl/glue_algorithm_defs.h \
- /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/MonitoramentoService.hpp \
- /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
- /usr/include/c++/13/system_error \
- /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
- /usr/include/c++/13/stdexcept /usr/include/c++/13/bits/fs_path.h \
- /usr/include/c++/13/locale /usr/include/c++/13/bits/locale_classes.h \
- /usr/include/c++/13/bits/locale_classes.tcc \
- /usr/include/c++/13/bits/locale_facets.h /usr/include/c++/13/cwctype \
- /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
- /usr/include/c++/13/bits/ios_base.h /usr/include/c++/13/streambuf \
- /usr/include/c++/13/bits/streambuf.tcc \
- /usr/include/c++/13/bits/streambuf_iterator.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h \
- /usr/include/c++/13/bits/locale_facets.tcc \
- /usr/include/c++/13/bits/locale_facets_nonio.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/13/bits/codecvt.h \
- /usr/include/c++/13/bits/locale_facets_nonio.tcc \
- /usr/include/c++/13/bits/locale_conv.h /usr/include/c++/13/iomanip \
- /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/sstream \
- /usr/include/c++/13/istream /usr/include/c++/13/ios \
- /usr/include/c++/13/bits/basic_ios.h \
- /usr/include/c++/13/bits/basic_ios.tcc /usr/include/c++/13/ostream \
- /usr/include/c++/13/bits/ostream.tcc \
- /usr/include/c++/13/bits/istream.tcc \
- /usr/include/c++/13/bits/sstream.tcc /usr/include/c++/13/codecvt \
- /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
- /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/ILeituraStrategy.hpp \
+ /usr/include/c++/13/bits/node_handle.h \
+ /usr/include/c++/13/bits/erase_if.h \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/DB.hpp \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/User.hpp \
+ /usr/include/c++/13/optional /usr/include/c++/13/vector \
+ /usr/include/c++/13/bits/stl_vector.h \
+ /usr/include/c++/13/bits/stl_bvector.h \
+ /usr/include/c++/13/bits/vector.tcc /usr/include/sqlite3.h \
  /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/IMonitoramentoMediator.hpp \
  /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/IOcrAdapter.hpp \
  /usr/include/opencv4/opencv2/opencv.hpp \
@@ -233,6 +201,11 @@ CMakeFiles/monitoramento.dir/src/CLI.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+ /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/bits/algorithmfwd.h \
+ /usr/include/c++/13/bits/stl_heap.h \
+ /usr/include/c++/13/bits/uniform_int_dist.h \
+ /usr/include/c++/13/pstl/glue_algorithm_defs.h \
  /usr/include/opencv4/opencv2/core/cvstd.hpp /usr/include/c++/13/cstring \
  /usr/include/string.h /usr/include/strings.h /usr/include/c++/13/utility \
  /usr/include/c++/13/bits/stl_relops.h /usr/include/c++/13/cmath \
@@ -273,11 +246,26 @@ CMakeFiles/monitoramento.dir/src/CLI.cpp.o: \
  /usr/include/opencv4/opencv2/core/persistence.hpp \
  /usr/include/opencv4/opencv2/core/operations.hpp \
  /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
- /usr/include/c++/13/complex \
+ /usr/include/c++/13/complex /usr/include/c++/13/sstream \
+ /usr/include/c++/13/istream /usr/include/c++/13/ios \
+ /usr/include/c++/13/bits/ios_base.h \
+ /usr/include/c++/13/bits/locale_classes.h \
+ /usr/include/c++/13/bits/locale_classes.tcc \
+ /usr/include/c++/13/system_error /usr/include/c++/13/stdexcept \
+ /usr/include/c++/13/streambuf /usr/include/c++/13/bits/streambuf.tcc \
+ /usr/include/c++/13/bits/basic_ios.h \
+ /usr/include/c++/13/bits/locale_facets.h /usr/include/c++/13/cwctype \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
+ /usr/include/c++/13/bits/streambuf_iterator.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h \
+ /usr/include/c++/13/bits/locale_facets.tcc \
+ /usr/include/c++/13/bits/basic_ios.tcc /usr/include/c++/13/ostream \
+ /usr/include/c++/13/bits/ostream.tcc \
+ /usr/include/c++/13/bits/istream.tcc \
+ /usr/include/c++/13/bits/sstream.tcc \
  /usr/include/opencv4/opencv2/core/utility.hpp \
  /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
- /usr/include/c++/13/mutex /usr/include/c++/13/bits/std_mutex.h \
- /usr/include/c++/13/bits/unique_lock.h \
  /usr/include/opencv4/opencv2/core/optim.hpp \
  /usr/include/opencv4/opencv2/core/ovx.hpp \
  /usr/include/opencv4/opencv2/core/cvdef.h \
@@ -291,7 +279,9 @@ CMakeFiles/monitoramento.dir/src/CLI.cpp.o: \
  /usr/include/opencv4/opencv2/dnn/dnn.hpp \
  /usr/include/opencv4/opencv2/core/async.hpp /usr/include/c++/13/chrono \
  /usr/include/opencv4/opencv2/dnn/version.hpp \
- /usr/include/opencv4/opencv2/dnn/dict.hpp \
+ /usr/include/opencv4/opencv2/dnn/dict.hpp /usr/include/c++/13/map \
+ /usr/include/c++/13/bits/stl_tree.h /usr/include/c++/13/bits/stl_map.h \
+ /usr/include/c++/13/bits/stl_multimap.h \
  /usr/include/opencv4/opencv2/dnn/layer.hpp \
  /usr/include/opencv4/opencv2/dnn/dnn.inl.hpp \
  /usr/include/opencv4/opencv2/dnn/utils/inference_engine.hpp \
@@ -323,7 +313,14 @@ CMakeFiles/monitoramento.dir/src/CLI.cpp.o: \
  /usr/include/opencv4/opencv2/flann/hierarchical_clustering_index.h \
  /usr/include/opencv4/opencv2/flann/lsh_index.h \
  /usr/include/opencv4/opencv2/flann/lsh_table.h \
- /usr/include/c++/13/math.h \
+ /usr/include/c++/13/iomanip /usr/include/c++/13/locale \
+ /usr/include/c++/13/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/13/bits/codecvt.h \
+ /usr/include/c++/13/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/13/bits/locale_conv.h \
+ /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/math.h \
  /usr/include/opencv4/opencv2/flann/autotuned_index.h \
  /usr/include/opencv4/opencv2/flann/ground_truth.h \
  /usr/include/opencv4/opencv2/flann/index_testing.h \
@@ -365,4 +362,21 @@ CMakeFiles/monitoramento.dir/src/CLI.cpp.o: \
  /usr/include/opencv4/opencv2/stitching/detail/camera.hpp \
  /usr/include/opencv4/opencv2/video.hpp \
  /usr/include/opencv4/opencv2/video/tracking.hpp \
- /usr/include/opencv4/opencv2/video/background_segm.hpp
+ /usr/include/opencv4/opencv2/video/background_segm.hpp \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/Logger.hpp \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/MonitoramentoBanco.hpp \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/MonitoramentoService.hpp \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/ILeituraStrategy.hpp \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/ISubject.hpp \
+ /usr/include/c++/13/atomic /usr/include/c++/13/filesystem \
+ /usr/include/c++/13/bits/fs_fwd.h /usr/include/c++/13/bits/fs_path.h \
+ /usr/include/c++/13/codecvt /usr/include/c++/13/bits/fs_dir.h \
+ /usr/include/c++/13/bits/fs_ops.h \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/PerfilManager.hpp \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/IPerfil.hpp \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/UsuarioService.hpp \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/UserBuilder.hpp \
+ /usr/include/c++/13/thread /usr/include/c++/13/bits/std_thread.h \
+ /usr/include/c++/13/bits/this_thread_sleep.h \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/DB.hpp \
+ /home/ayrton/Documentos/painel_monitoramento_hidrometros/include/User.hpp
