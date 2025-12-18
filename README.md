@@ -24,6 +24,8 @@ Sistema de monitoramento e gestão de dados de hidrômetros.
 
 ## 🏆 Métricas do Projeto
 
+![Progresso](https://geps.dev/progress/100?dangerColor=800080&warningColor=ff0000&successColor=00ff00)
+
 | Métrica | Status |
 |---------|--------|
 | **Total de Commits** | ![GitHub commits](https://img.shields.io/github/commit-activity/t/matos-ayrton/painel_monitoramento_hidrometros?style=flat-square) |
